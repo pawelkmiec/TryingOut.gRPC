@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryingOut.gRPC.Service", "TryingOut.gRPC.Service\TryingOut.gRPC.Service.csproj", "{4E15BFB3-A8AC-416E-9084-F8D9AC3A2F09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryingOut.gRPC.Service", "TryingOut.gRPC.Service\TryingOut.gRPC.Service.csproj", "{4E15BFB3-A8AC-416E-9084-F8D9AC3A2F09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryingOut.gRPC.Client", "TryingOut.gRPC.Client\TryingOut.gRPC.Client.csproj", "{70FE06B0-E776-4526-B62D-11D3DAC10B40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryingOut.gRPC.Client", "TryingOut.gRPC.Client\TryingOut.gRPC.Client.csproj", "{70FE06B0-E776-4526-B62D-11D3DAC10B40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Benchmark", "Benchmark", "{259E1951-5477-421E-86EA-42215F202EBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryingOut.Benchmark.Api", "TryingOut.Benchmark.Api\TryingOut.Benchmark.Api.csproj", "{2E7E2DFC-7F66-44E7-9623-57035992730F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryingOut.Benchmark.Runner", "TryingOut.Benchmark.Runner\TryingOut.Benchmark.Runner.csproj", "{11BFEB0B-8386-42F3-B807-768BD40F0367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryingOut.Benchmark.Contracts", "TryingOut.Benchmark.Contracts\TryingOut.Benchmark.Contracts.csproj", "{34833B06-6090-4C39-91AB-1C5176EA54B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +29,26 @@ Global
 		{70FE06B0-E776-4526-B62D-11D3DAC10B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70FE06B0-E776-4526-B62D-11D3DAC10B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70FE06B0-E776-4526-B62D-11D3DAC10B40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E7E2DFC-7F66-44E7-9623-57035992730F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E7E2DFC-7F66-44E7-9623-57035992730F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E7E2DFC-7F66-44E7-9623-57035992730F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E7E2DFC-7F66-44E7-9623-57035992730F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11BFEB0B-8386-42F3-B807-768BD40F0367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11BFEB0B-8386-42F3-B807-768BD40F0367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11BFEB0B-8386-42F3-B807-768BD40F0367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11BFEB0B-8386-42F3-B807-768BD40F0367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34833B06-6090-4C39-91AB-1C5176EA54B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34833B06-6090-4C39-91AB-1C5176EA54B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34833B06-6090-4C39-91AB-1C5176EA54B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34833B06-6090-4C39-91AB-1C5176EA54B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E7E2DFC-7F66-44E7-9623-57035992730F} = {259E1951-5477-421E-86EA-42215F202EBE}
+		{11BFEB0B-8386-42F3-B807-768BD40F0367} = {259E1951-5477-421E-86EA-42215F202EBE}
+		{34833B06-6090-4C39-91AB-1C5176EA54B5} = {259E1951-5477-421E-86EA-42215F202EBE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C716D383-020E-49B0-900B-BA1606FEF744}

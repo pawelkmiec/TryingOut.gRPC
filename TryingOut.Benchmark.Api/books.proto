@@ -1,0 +1,38 @@
+﻿
+syntax = "proto3";
+
+option csharp_namespace = "TryingOut.Benchmark.Api.Grpc";
+
+package Books;
+
+service BookService {
+	rpc GetAll (GetAllBooksRequest) returns (BooksResponse);
+
+	rpc First (GetFirstBookRequest) returns (BookResponse);
+}
+
+message GetAllBooksRequest {
+}
+
+message GetFirstBookRequest {
+}
+
+message BooksResponse {
+	repeated Book books = 1;
+}
+
+message BookResponse { 
+	Book book = 1;
+}
+
+message Book {
+	string ISBN = 1;
+	string Title = 2;
+	int32 YearPublished = 3;
+	Author Author = 4;
+}
+
+message Author {
+	string FirstName = 1;
+	string LastName = 2;
+}
