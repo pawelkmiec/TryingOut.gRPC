@@ -25,5 +25,11 @@ namespace TryingOut.Benchmark.Runner
             var response = await _client.FirstAsync(new GetFirstBookRequest());
             return response.Book;
         }
+
+        public async Task<BookSalesStats> GetStats()
+        {
+            var response = await _client.GetSalesStatsAsync(new GetSalesStatsRequest());
+            return response.Stats;
+        }
     }
 }

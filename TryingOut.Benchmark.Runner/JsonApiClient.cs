@@ -32,5 +32,12 @@ namespace TryingOut.Benchmark.Runner
             var book = JsonSerializer.Deserialize<BookDto>(response);
             return book;
         }
+
+        public async Task<BooksSalesStatsDto> GetStats()
+        {
+            var response = await _client.GetStringAsync("/books/stats");
+            var stats = JsonSerializer.Deserialize<BooksSalesStatsDto>(response);
+            return stats;
+        }
     }
 }

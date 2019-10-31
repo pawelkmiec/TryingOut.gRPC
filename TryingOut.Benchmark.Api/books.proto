@@ -9,6 +9,8 @@ service BookService {
 	rpc GetAll (GetAllBooksRequest) returns (BooksResponse);
 
 	rpc First (GetFirstBookRequest) returns (BookResponse);
+
+	rpc GetSalesStats (GetSalesStatsRequest) returns (GetSalesStatsResponse);
 }
 
 message GetAllBooksRequest {
@@ -17,12 +19,19 @@ message GetAllBooksRequest {
 message GetFirstBookRequest {
 }
 
+message GetSalesStatsRequest {
+}
+
 message BooksResponse {
 	repeated Book books = 1;
 }
 
 message BookResponse { 
 	Book book = 1;
+}
+
+message GetSalesStatsResponse {
+	BookSalesStats stats = 1;
 }
 
 message Book {
@@ -35,4 +44,10 @@ message Book {
 message Author {
 	string FirstName = 1;
 	string LastName = 2;
+}
+
+message BookSalesStats {
+	int32 SalesQuantityLastMonth = 1;
+	int32 SalesQuantityLastYear = 2;
+	int32 SalesQuantityTotal = 3;
 }

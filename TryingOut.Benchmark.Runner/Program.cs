@@ -18,6 +18,9 @@ namespace TryingOut.Benchmark.Runner
             await RunTest(nameof(GetBookGrpc), GetBookGrpc);
             await RunTest(nameof(GetBookJson), GetBookJson);
 
+            await RunTest(nameof(GetStatsGrpc), GetStatsGrpc);
+            await RunTest(nameof(GetStatsJson), GetStatsJson);
+
             if (Debugger.IsAttached)
             {
                 Console.ReadLine();
@@ -49,6 +52,16 @@ namespace TryingOut.Benchmark.Runner
         private static async Task GetBookJson()
         {
             await JsonClient.GetBook();
+        }
+
+        private static async Task GetStatsGrpc()
+        {
+            await GrpcClient.GetStats();
+        }
+
+        private static async Task GetStatsJson()
+        {
+            await JsonClient.GetStats();
         }
 
         private static async Task<long> Repeat(int count, Func<Task> toRepeat)
